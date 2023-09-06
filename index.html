@@ -225,7 +225,7 @@
   background-position: 64%;
 }
 #es-rc.es-rc .es-description__box {
-  height: 380px;;
+  height: 380px;
 }
 @media (min-width: 786px) {
   #es-rc.es-rc .es-description__box {
@@ -387,7 +387,7 @@
   background-color: #19428f !important;
 }
 #es-rc.es-rc .es-dose__even {
-  background-color: #1b4a97 !important;
+  background-color: rgba(31, 87, 164, 0.3764705882) !important;
 }
 #es-rc.es-rc .es-dose__box {
   padding: 0 !important;
@@ -507,12 +507,23 @@
   position: absolute;
   width: 100%;
   height: 410px;
-  bottom: 0;
+  top: 439px;
   left: 0;
   background: rgb(68, 152, 209);
   background: linear-gradient(180deg, rgb(68, 152, 209) 0%, rgb(31, 87, 164) 27%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4498d1", endColorstr="#1f57a4", GradientType=1);
   z-index: -1;
+}
+@media (min-width: 540px) {
+  #es-rc.es-rc .es-cross__bg {
+    top: 415px;
+  }
+}
+
+@media (min-width: 992px) {
+  #es-rc.es-rc .es-cross__bg {
+    height: 400px;
+  }
 }
 @supports (-webkit-touch-callout: none) {
   #es-rc.es-rc .es-cross__bg {
@@ -522,10 +533,9 @@
 #es-rc.es-rc .es-cross__title {
   width: 100%;
   text-align: center !important;
-}
-#es-rc.es-rc .es-cross__title {
   animation: slideleft 1s ease forwards;
 }
+
 #es-rc.es-rc .es-cross__text {
   text-align: center;
   color: #fff;
@@ -541,6 +551,11 @@
   font-family: "MuseoSans";
   line-height: 1.3;
   background-color: #d32833;
+}
+@media (min-width: 768px) {
+  #es-rc.es-rc .es-cross__text {
+    font-size: 30px;
+  }
 }
 #es-rc.es-rc .es-cross table,
 #es-rc.es-rc .es-cross thead,
@@ -558,7 +573,7 @@
 }
 #es-rc.es-rc .es-cross__emptyImage {
   display: block;
-  height: 271px !important;
+  height: 250px !important;
   padding-top: 50px;
 }
 #es-rc.es-rc .es-cross__badge {
@@ -573,6 +588,7 @@
   font-family: "MuseoSans";
   padding: 0 0 0 10px !important;
   border-radius: 5px;
+  animation: pulse 1.2s infinite;
 }
 #es-rc.es-rc .es-cross__badge span {
   line-height: 1.3;
@@ -581,6 +597,7 @@
   border-radius: 5px;
   margin-left: -10px !important;
 }
+
 #es-rc.es-rc .es-cross__row {
   vertical-align: middle;
   text-align: left !important;
@@ -607,14 +624,9 @@
 #es-rc.es-rc .es-cross__row--4 {
   height: 88px;
 }
-@media (min-width: 768px) {
-  /* #es-rc.es-rc .es-cross__row--1 {
-    height: 80px;
-  } */
-  #es-rc.es-rc .es-cross__row--2
-  #es-rc.es-rc .es-cross__row--3
+@media (min-width: 992px) {
   #es-rc.es-rc .es-cross__row--4 {
-    height: 64px;
+    /* height: 64px; */
   }
 }
 #es-rc.es-rc .es-cross__row--5 {
@@ -642,11 +654,13 @@
   border-color: transparent !important;
 }
 #es-rc.es-rc .es-cross thead {
-  height: 271px;
+  height: 271px !important;
+  overflow: hidden  !important;
+  z-index: -1  !important;
 }
 #es-rc.es-rc .es-cross tbody {
   height: 400px;
-  z-index: 2;
+  z-index: 2 !important;
 }
 #es-rc.es-rc .es-cross td {
   font-family: "Montserrat";
@@ -654,6 +668,8 @@
   color: #fff;
   font-size: 16px !important;
   font-weight: 300;
+  vertical-align: -webkit-baseline-middle;
+  vertical-align: middle;
 }
 #es-rc.es-rc .es-cross td span {
   font-weight: 700;
@@ -661,12 +677,13 @@
 #es-rc.es-rc .es-cross th {
   border: none !important;
   min-width: 90px;
+  height: 271px !important;
 }
+
+
 #es-rc.es-rc .es-articles__title {
   width: 100%;
   text-align: center !important;
-}
-#es-rc.es-rc .es-articles__title {
   animation: slideleft 1s ease forwards;
 }
 #es-rc.es-rc .es-articles__text {
@@ -688,7 +705,7 @@
 @media (min-width: 768px) {
   #es-rc.es-rc .es-articles__text {
     font-size: 30px;
-    width: 100%;
+    max-width: 100%;
   }
 }
 #es-rc.es-rc .es-articles__text1 {
@@ -1075,7 +1092,7 @@
             </div>
 
             <div class="row text-center justify-content-sm-center no-gutters px-3">
-              <div class="col-12 col-sm-10 col-md-8 col-lg-6 m-auto pt-5">
+              <div class="col-12 col-sm-10 col-md-6 m-auto pt-5">
                 <div class="fdb-box es-description__box py-3 px-3 px-sm-4">
                   <img alt="Kaszlesz, ale nie czujesz zalegającej wydzieliny w gardle? Wybierz środek na suchy kaszel lub zasięgnij porady specjalisty." class="img-fluid pb-3" src="./images/head.webp">
                   <img alt="" class="img-fluid pb-3 es-caught" src="./images/c-1.webp">
@@ -1085,7 +1102,7 @@
                     "poszczekiwanie". Powoduje także podrażnienie tchawicy.<sup>3,4,5,6</sup></p>
                 </div>
               </div>
-              <div class="col-12 col-sm-10 col-md-8 col-lg-6 m-auto pt-5">
+              <div class="col-12 col-sm-10 col-md-6 m-auto pt-5">
                 <div class="fdb-box es-description__box py-3 px-3 px-sm-4">
                   <img alt="Przewlekły kaszel nie daje Ci spokoju? Walczysz ze zbierającą się wydzieliną w gardle? To prawdopodobnie kaszel mokry." class="img-fluid pb-3" src="./images/head.webp">
                   <img alt="" class="img-fluid pb-3 es-caught" src="./images/caught-2.webp">
@@ -1154,7 +1171,7 @@
         <section class="fdb-block bg-dark es-dose">
           <div class="container">
             <div class="row text-center justify-content-sm-center no-gutters d-lg-flex flex-row justify-content-lg-around px-3">
-              <div class="col-12 col-md-10 col-lg-6 m-0 px-lg-3 pt-5">
+              <div class="col-12 col-md-10 col-lg-6 m-0 px-0 px-lg-3 pt-5">
                 <p class="es-dose__subtitle mb-4">dawkowanie</p>
                 <div class="fdb-box es-dose__box">
                   <table class="">
@@ -1255,9 +1272,8 @@
                       </th>
                     </tr>
                   </thead>
-                  <tbody class="pt-2 es-cross__left">
-                    <tr>
-                      <td class="es-cross__row es-cross__row--1" scope="row"><span class="es-cross__head">&nbsp;<br/>&nbsp;</span></td>
+                  <tbody class="m-0 p-0 es-cross__left">
+                    <tr class="m-0 p-0" height="82px">
                     </tr>
                     <tr>
                       <td class="es-cross__row es-cross__row--2" scope="row">Typ Produktu</td>
@@ -1352,7 +1368,7 @@
                   </table>
                 </div>
               </div>
-              <div class="es-cross__bg"></div>
+              <div class="es-cross__bg">&nbsp;</div>
             </div>
           </div>
         </section>
@@ -1444,7 +1460,7 @@
 
               </div>
               <div class="col-5 col-sm-3 text-right">
-                <img alt="image" class="img-fluid p-1" src="./images/logo.webp">
+                <img alt="logo Sanofi" class="img-fluid p-1" src="./images/logo.webp">
               </div>
             </div>
           </div>
